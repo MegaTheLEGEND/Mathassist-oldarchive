@@ -140,11 +140,15 @@
 		    
 			
 		    
-		    <button type="button" onclick="getInputValue();"> change tab icon </button>
+		  <input type="text" placeholder="put image url here." id="image">
+    <button type="button" onclick="getInputValue();">change tab icon</button>
  <script>
    // Example: https://mathiasbynens.be/demo/dynamic-favicon
   function getInputValue(){
-    changeFavicon('https://www.google.com/favicon.ico');
+	  
+	   var inputVal = document.getElementById("image").value;
+	  
+    changeFavicon('test') = inputVal;
    };
   </script>
 		
