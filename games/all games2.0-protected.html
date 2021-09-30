@@ -129,19 +129,65 @@
 					= inputVal;
         }
     </script>
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
 			
 		    
-		    
-		    			    <input type="text" placeholder="Put image link here." id="yourInput">
-    <button type="button" onclick="getavalue();">change tab image</button>
-    
-    <script>
-       var btn = document.getElementsByTagName('button')[0];
-btn.onclick = function() {
- changeFavicon('http://www.google.com/favicon.ico');
-};
-    </script>
+		    <button>Click to change favicon</button>
+  <p>See <a href="https://gist.github.com/428626">gist 428626</a>. Works in Firefox, Opera, and Chrome. Fails in Safari and Internet Explorer. — <a href="/" title="Mathias Bynens, front-end web developer">Mathias</a></p>
+  <script>
+
+   // HTML5, baby! https://mathiasbynens.be/notes/document-head
+   document.head || (document.head = document.getElementsByTagName('head')[0]);
+
+   function changeFavicon(src) {
+    var link = document.createElement('link'),
+        oldLink = document.getElementById('dynamic-favicon');
+    link.id = 'dynamic-favicon';
+    link.rel = 'icon';
+    link.href = src;
+    if (oldLink) {
+     document.head.removeChild(oldLink);
+    }
+    document.head.appendChild(link);
+   }
+
+   // Example: https://mathiasbynens.be/demo/dynamic-favicons
+   var btn = document.getElementsByTagName('button')[0];
+   btn.onclick = function() {
+    changeFavicon('https://www.google.com/favicon.ico');
+   };
+
+   // Optimized Google Analytics snippet
+   // See https://mathiasbynens.be/notes/async-analytics-snippet
+   var _gaq = [['_setAccount', 'UA-6065217-11'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = 'https://www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script>
 		
+		  
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
 		    
 		    
 			
