@@ -117,7 +117,7 @@
 			
 			
 			
-			    <input type="text" placeholder="Type something..." id="myInput">
+			    <input type="text" placeholder="Put new tab name here." id="myInput">
     <button type="button" onclick="getInputValue();">change tab title</button>
     
     <script>
@@ -130,6 +130,23 @@
         }
     </script>
 			
+		    
+		    
+		    			    <input type="text" placeholder="Put new tab name here." id="yourInput">
+    <button type="button" onclick="getInputValue();">change tab image</button>
+    
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("yourInput").value;
+            
+            document.querySelector('title').textContent
+					= inputVal;
+        }
+    </script>
+		
+		    
+		    
 			
                 <div id="dialogText">This page is password protected. Only members are allowed.</div>
                 <div id="passArea">
