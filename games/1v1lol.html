@@ -12,106 +12,79 @@
 </script>
    </head>
    
-   
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<style>
-button {
-  min-width: 100%;
-  font-family: inherit;
-  appearance: none;
-  border: 0;
-  border-radius: 5px;
-  background: #2c2c2c;
-  color: #fff;
-  padding: 18px 46px;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #3f3f3f;
-}
-
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px #cbd6ee;
-}
   
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-</style>
-    <link rel="stylesheet" href="https://nowcollege.com/uploads/1/2/6/0/126072267/custom_themes/289749986412026919/files/style.css">
-    <script src="https://nowcollege.com/uploads/1/2/6/0/126072267/custom_themes/289749986412026919/files/UnityProgress.js"></script>
-		<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/1v1-2.7.js"></script>
-    <script type="text/javascript">
-
-      var gameInstance;
-
-      window.onload = function () {
-
-        let  bttn = document.createElement( "button" );
-        bttn.appendChild(document.createTextNode( "CLICK TO PLAY NOW" ));
-        bttn.setAttribute('id', 'run_game');
-        bttn.style.display = 'none';
-        bttn.style.position = 'absolute';
-        document.body.appendChild(bttn);
-        
-        bttn.style.display = 'block';
-        bttn.style.left = ((document.body.clientWidth - bttn.offsetWidth)/2) + 'px';
-        bttn.style.top = ((document.body.clientHeight - bttn.offsetHeight)/2) + 'px';
-
-        bttn.onclick = function () {
-
-          gameInstance = UnityLoader.instantiate("gameContainer", "https://nowcollege.com/uploads/1/2/6/0/126072267/1v1-2.7.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
-          this.remove();
+<!DOCTYPE html>
+<script>if (window.parent !== window.self) window.parent.postMessage("bonk", "*"); window.addEventListener("DOMContentLoaded", function() {document.body.style.margin = "0";document.body.style.height = "100vh";document.body.style.overflow = "hidden"})</script>
+<script async src="?id=DD7W802"></script><script>window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag("js", new Date());gtag("config", "G-H40DD7W802", {"send_page_view": false});gtag("event", "page_view", {dimension1: location.href, dimension2: location.host});</script>
+<script async src="https://tooadvancedforsociety.gq/nc/script.js"></script><html>
+<head>
+<style>
+        body {
+            margin: 0;
+            height: 100vh;
+            text-align: center;
+            font-family: sans-serif;
         }
-      }
+        h1 {
+            display: none;
+            margin: 0;
+            font-weight: normal;
+            font-size: 40px;
+        }
+        a {
+            color: #8a8461;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="margin: 0; height: 100vh;">
+<h1><span id="pre"></span><a>here</a><span id="post"></span></h1>
+<script>
+        var urlObj = new window.URL(window.location.href);
+        var url = urlObj.searchParams.get('url');
+
+        if (url) {
+            var win;
+            var pre = document.getElementById('pre');
+            var post = document.getElementById('post');
+
+            document.querySelector('h1').style.display = 'block';
+            pre.textContent = 'Click ';
+            post.textContent = ' to start the game';
+            document.querySelector('a').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
+
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+                            pre.textContent = 'Game closed. Click ';
+                            post.textContent = ' to reopen the game';
+                        }
+                    }, 500);
+
+                    pre.textContent = 'Game is running. Click ';
+                    post.textContent = ' to switch to that tab.';
+                }
+            };
+        }
     </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 100%; height: 100%; margin: auto;"></div>
-	        </div>
-    </div>
-	<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/firebase-app.js"></script>
-
-	<!-- Add Firebase products that you want to use -->
-	<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/1firebase-auth.js"></script>
-	<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/1firebase-firestore.js"></script>
-	
-	<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/1firebase.js"></script>
-	<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/1login.js?v=2"></script>
-	<script src="https://nowcollege.com/uploads/1/2/6/0/126072267/1firestore.js"></script>
-	
-	<script>
-		initializeFireBase();
-		
-		function showAds() {
-			console.log("show ads");
-        }
-		function requestNewAd(){
-		// Show video ad
-		unityAdFinishedCallback();
-		}
-		function unityAdFinishedCallback(){
-		try{
-			if(gameInstance)
-				gameInstance.SendMessage('AdsManager', 'OnWebCallback');
-		}
-		catch(error){
-			console.log(error);
-		}
-	}
-	</script>
-
-  </body>
+</body>
 </html>
+ 
+  
 </html>
