@@ -136,12 +136,10 @@
     <button type="button" onclick="getavalue();">change tab image</button>
     
     <script>
-        function getavalue(){
-            // Selecting the input element and get its value 
-            var inputVal = document.getElementById("yourInput").value;
-            
-           changeFavicon('yourInput');
-        }
+       var btn = document.getElementsByTagName('button')[0];
+btn.onclick = function() {
+ changeFavicon('http://www.google.com/favicon.ico');
+};
     </script>
 		
 		    
