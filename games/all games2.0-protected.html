@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>Password Protected Page</title>
+    <title>LEGEND</title>
+	  <link rel="shortcut icon" href="https://github.com/MegaTheLEGEND/html-m.a/blob/main/EmbeddedImage.png?raw=true">
     <style>
         html, body {
             margin: 0;
@@ -111,7 +112,23 @@
     <div id="dialogWrap">
         <div id="dialogWrapCell">
             <div id="mainDialog">
-                <div id="dialogText">This page is password protected.</div>
+			
+			
+			<input type="text" placeholder="Type something..." id="myInput">
+    <button type="button" onclick="getInputValue();">change tab title</button>
+    
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            
+            document.querySelector('title').textContent
+					= inputVal;
+        }
+    </script>
+			
+			
+                <div id="dialogText">This page is password protected. Only members are allowed.</div>
                 <div id="passArea">
                     <p id="passwordPrompt">Password</p>
                     <input id="pass" type="password" name="pass" autofocus>
@@ -129,7 +146,7 @@
         </div>
     </div>
     <div id="attribution">
-        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+        Mega_TheLEGEND
     </div>
     <script>
 /*
