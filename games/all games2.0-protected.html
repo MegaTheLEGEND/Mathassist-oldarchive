@@ -1,13 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
-	  
-  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>LEGEND</title>
-	  <link rel="icon" href="https://github.com/MegaTheLEGEND/html-m.a/blob/main/EmbeddedImage.png?raw=true">
+    <title>Password Protected Page</title>
     <style>
         html, body {
             margin: 0;
@@ -114,26 +111,7 @@
     <div id="dialogWrap">
         <div id="dialogWrapCell">
             <div id="mainDialog">
-			
-			
-			
-			    <input type="text" placeholder="Put new tab name here." id="myInput">
-    <button type="button" onclick="getInputValue();">change tab title</button>
-    
-    <script>
-        function getInputValue(){
-            // Selecting the input element and get its value 
-            var inputVal = document.getElementById("myInput").value;
-            
-            document.querySelector('title').textContent
-					= inputVal;
-        }
-    </script>    
-		    
-		    
-		    
-			
-                <div id="dialogText">This page is password protected. Only members are allowed.</div>
+                <div id="dialogText">This page is password protected.</div>
                 <div id="passArea">
                     <p id="passwordPrompt">Password</p>
                     <input id="pass" type="password" name="pass" autofocus>
@@ -151,7 +129,7 @@
         </div>
     </div>
     <div id="attribution">
-        Mega_TheLEGEND
+        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
     </div>
     <script>
 /*
@@ -286,7 +264,7 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
         }( this, this.document ));
     </script>
     <script>
-        var pl = {"salt":"YhpvA9Xlu+BMPRf3JaqpeMZunV8Y0XX29GtyVY+HKsY=","iv":"5KP/PngbCibCXby9dgZTmA==","data":"u6vyDyaqRZ7eX2KPug8ydibwWNwyZAleuz4jyD79j8OW6knVmK+2MZPM1cGsITVcDbLRvEWfUEyxu1Du65cXcjl+xMr7CT3UyaAeHaPUcFnzffZVfGYqEDuLhxwq9XSzf93l3r5Z6TZJCK3GH5OU8Y1V7OFOgFj45ODmnVwn+gnT/rQDq1XpcJPnNFM3k1+S7FrJT8+6ikFjAm51l35hIBW1Qt5IDvqXsB/9yl1PtUiz6Mh8nz9nesGX4ev5dYJbrC1z+/YL217g7ZtiXNnXStMnRpQTrTqmHdw9EqDa/iv8cuE13EYYKtx2nn/SCCzlxDRu+wsyBbLohDm33qtq6mpV207epVhkqjMhJJ6xp/k="};
+        var pl = {"salt":"bpMscWe4X5dCs4neDzFjf8AoxRFzczsaJ8FBBDpQD4Y=","iv":"mDwbwpeQ1KAg5++N+EPGAQ==","data":"mTZxCdotky76I+Wufzix906F3HoiveRf6U+ctv7MyJ1SZS0wk+1s1e9vlIAEpqTsR5MFmTjz6vvohi9lRWYRqI/jX/e3l/YSlDt55ph8xxoRTJVIrG3ihVrlmNpMk46nkmYJi1jNGJ5nK6m46SODZVHSuO9yWm0NbQ+6qpc/JTpecOS8uz9nw+hx7mv1Q2inGhophMQtDD8rtqGKTbgOKwneQdw5zND9i3kkaREO7Kn4eLMuSZejKswagKuFdGO1PuMVe2Y8oecZHuf5JTt0X9N4PDskv3lO04pg6pQuEIY="};
         
         var submitPass = document.getElementById('submitPass');
         var passEl = document.getElementById('pass');
@@ -344,7 +322,5 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
             return decrypted.toString(CryptoJS.enc.Utf8);
         }
     </script>
-	  
- 
   </body>
 </html>
