@@ -34,6 +34,17 @@
 					<div class="form-control">
 						<label for="room">Password</label>
 						<input type="text" id="room" name="room" placeholder="code to access room..." required>
+						<script> 
+						$("input#room").on({
+  keydown: function(e) {
+    if (e.which === 32)
+      return false;
+  },
+  change: function() {
+    this.value = this.value.replace(/\s/g, "");
+  }
+});
+						</script>
 					</div>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
