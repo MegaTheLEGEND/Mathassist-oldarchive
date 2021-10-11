@@ -27,27 +27,16 @@
 							type="text"
 							name="username"
 							id="username"
+						        autocomplete="on"
 							placeholder="Enter username..."
 							required
 						/>
 					</div>
 					<div class="form-control">
-						<label for="room">Password</label>
-						<input type="text" id="room" name="room" placeholder="code to access room..." autocomplete="on" required>
-						<script>
-						    {
-        // hack to remember last error id on page refresh
-        // can't believe i have to do this, but my browser don't want to remember it itself, 
-        // ... not sure why
-        let errorid_element=document.querySelector("#errorlog_id");
-        let rememberHack=function(){
-            localStorage.setItem("room",errorid_element.value);
-        };
-        errorid_element.addEventListener("input",rememberHack);
-        errorid_element.addEventListener("change",rememberHack);
-        errorid_element.value = localStorage.getItem("room");
-    }
-	</script>					
+						<label for="text">Password</label>
+						<input type="text" id="room" name="text" placeholder="code to access room..." autocomplete="on" required>
+						
+						
 					</div>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
