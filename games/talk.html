@@ -11,32 +11,30 @@
 			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="https://chatcord125.herokuapp.com/css/style.css" />
-		<title>ChatCord App</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>ChatCat App</title>
 	</head>
 	<body>
 		<div class="join-container">
 			<header class="join-header">
-				<h1><i class="fas fa-smile"></i> ChatCord</h1>
+        <img src="https://kitcat.com.sg/wp-content/uploads/2020/07/Kit-Cat.png" style="width:50px;height:50px;">
+				<h1></i>ChatCat</h1>
 			</header>
 			<main class="join-main">
-				<form action="https://chatcord125.herokuapp.com/chat.html">
+				<form action="chat.html">
 					<div class="form-control">
 						<label for="username">Username</label>
 						<input
 							type="text"
 							name="username"
 							id="username"
-						        autocomplete="on"
 							placeholder="Enter username..."
 							required
 						/>
 					</div>
 					<div class="form-control">
-						<label for="text">Room ID</label>
-						<input type="text" id="text" name="room" placeholder="code to access room..." autocomplete="text" >
-                        
-						
+						<label for="room">Room ID</label>
+						<input type="text" id="room" name="room" placeholder="code to access room..." required>
 					</div>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
