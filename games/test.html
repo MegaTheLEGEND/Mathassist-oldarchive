@@ -1,19 +1,16 @@
 <script>
-  (function () {
-    var location = window.document.location;
-
-    var preventNavigation = function () {
-        var originalHashValue = location.hash;
-
-        window.setTimeout(function () {
-            location.hash = 'preventNavigation' + ~~ (9999 * Math.random());
-            location.hash = originalHashValue;
-        }, 0);
-    };
-
-    window.addEventListener('beforeunload', preventNavigation, false);
-    window.addEventListener('unload', preventNavigation, false);
-})();
+ <h1 id="home">Warn before leaving the page</h1>
+ 
+<script>
+// Warning before leaving the page (back button, or outgoinglink)
+window.onbeforeunload = function() {
+   return "Do you really want to leave our brilliant application?";
+   //if we return nothing here (just calling return;) then there will be no pop-up question at all
+   //return;
+};
+</script>
+ 
+<a href="http://code-maven.com/">Code Maven</a>
 </script>
 
 hi
