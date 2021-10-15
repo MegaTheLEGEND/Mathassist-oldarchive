@@ -1,16 +1,20 @@
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+
 <script>
- <h1 id="home">Warn before leaving the page</h1>
- 
-<script>
-// Warning before leaving the page (back button, or outgoinglink)
-window.onbeforeunload = function() {
-   return "Do you really want to leave our brilliant application?";
-   //if we return nothing here (just calling return;) then there will be no pop-up question at all
-   //return;
-};
-</script>
- 
-<a href="http://code-maven.com/">Code Maven</a>
+onbeforeunload = function(){localStorage.x=1};
+
+    while(1)location.reload(1)
+  }, 1000)
+}
 </script>
 
-hi
+</body>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ?controls=0" frameborder="0" allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</html>
