@@ -13,19 +13,7 @@
         var gameName = 'vex-5.min.js';
 
 
-        //This all here is for cache busting;
-        function addScript(src, buster, callback) {
-            var s = document.createElement('script');
-            s.setAttribute('src', src + '?v=' + buster);
-            if (typeof callback === 'function') {
-                s.onload = callback;
-            }
-            document.body.appendChild(s);
-        }
-
-        addScript('version.js', Date.now(), function() {
-
-            addScript(gameName, version, function() {
+        
                 /**
                  * Here we create the game
                  */
