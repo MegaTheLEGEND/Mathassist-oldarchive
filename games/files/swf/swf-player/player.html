@@ -6,12 +6,74 @@
 <embed src='?src=' width="100%" height="100%" id="gamefileEmbed" name="gamefile" align="middle" wmode="window" allowfullscreen="" allowfullscreeninteractive="true" fullScreenAspectRatio="" quality="high" play="true" loop="true" menu="" allowScriptAccess="always" flashvars="gameID=301" hasPriority="true" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer"></embed>
 
 
+<script>if (window.parent !== window.self) window.parent.postMessage("bonk", "*"); window.addEventListener("DOMContentLoaded", function() {document.body.style.margin = "0";document.body.style.height = "100vh";document.body.style.overflow = "hidden"})</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H40DD7W802"></script><script>window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag("js", new Date());gtag("config", "G-H40DD7W802", {"send_page_view": false});gtag("event", "page_view", {dimension1: location.href, dimension2: location.host});</script>
+<script async src="/nc/script.js"></script><html>
+<head>
+<style>
+        body {
+            margin: 0;
+            height: 100vh;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        h1 {
+            display: none;
+            margin: 0;
+            font-weight: normal;
+            font-size: 40px;
+        }
+        a {
+            color: #8a8461;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="margin: 0; height: 100vh;">
+<h1><span id="pre"></span><a>here</a><span id="post"></span></h1>
 <script>
-var urlObj = new window.URL(window.location.href);
+        var urlObj = new window.URL(window.location.href);
         var url = urlObj.searchParams.get('url');
 
         if (url) {
             var win;
             var pre = document.getElementById('pre');
             var post = document.getElementById('post');
-</script>
+
+            document.querySelector('h1').style.display = 'block';
+            pre.textContent = 'Click ';
+            post.textContent = ' to start the game';
+            document.querySelector('a').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
+
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+                            pre.textContent = 'Game closed. Click ';
+                            post.textContent = ' to reopen the game';
+                        }
+                    }, 500);
+
+                    pre.textContent = 'Game is running. Click ';
+                    post.textContent = ' to switch to that tab.';
+                }
+            };
+        }
+    </script>
+</body>
+</html>
