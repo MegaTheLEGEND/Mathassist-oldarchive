@@ -127,6 +127,30 @@
         }
     </script>
 			
+		    
+<script>
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+  </script>
+	<input type="text" placeholder="paste a link" id="imgLink">
+    <button type="button" onclick="getInputValue();">change tab image</button>
+    
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("imgLink").value;
+            
+            link.href = inputVal;
+            
+        }
+    </script>
+		    
+		    
+		    
 			<small> if page is not loading click <a href="http://its-me.ga/games/all%20games2.0-protected.html">HERE</a>  </small>
                 <div id="dialogText">This page is password protected. Only members are allowed.</div>
                 <div id="passArea">
