@@ -26,15 +26,6 @@ class="cornerdiv" style="height: 100%;"></div>
 
 <script>
  
-/*
- * Usage
- *   The following code will modify the title of the browser tab on the "blur" event and change it back to the original on the "focus" event.
- *   http://developers.optimizely.com/javascript/code-samples/index.html#advanced-use-cases-browserTab-test
- */
-
- // store the original tab title
- var origTitle = document.title;
-
  // function to change title when focusing on tab
  function oldTitle() {
   myDIV.style.visibility = 'hidden';      // Hide
@@ -46,7 +37,7 @@ class="cornerdiv" style="height: 100%;"></div>
  }
 
  // bind functions to blur and focus events
- window.onblur = newTitle;
- window.onfocus = oldTitle;
+ window.onblur = imgON;
+ window.onfocus = imgOFF;
 	
 </script>
