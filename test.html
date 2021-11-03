@@ -6,13 +6,13 @@ if (!link) {
     document.getElementsByTagName('head')[0].appendChild(link);
 }
   </script>
-	<input type="text" placeholder="paste a link" id="myInput">
+	<input type="text" placeholder="paste a link" id="imgLink">
     <button type="button" onclick="getInputValue();">change tab image</button>
     
     <script>
         function getInputValue(){
             // Selecting the input element and get its value 
-            var inputVal = document.getElementById("myInput").value;
+            var inputVal = document.getElementById("imgLink").value;
             
             link.href = inputVal;
             
