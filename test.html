@@ -18,8 +18,11 @@ if (!link) {
             
         }
     </script>
-<div style="background-image: URL(https://its-me.ga/google.png); width: 100%;"><div
-class="cornerdiv" style="height: 100%;"></div></div>
+<div id="myDIV"
+style="background-image: URL(https://its-me.ga/google.png); width: 100%;"><div
+class="cornerdiv" style="height: 100%;"></div>
+</div>
+
 
 <script>
  
@@ -34,7 +37,7 @@ class="cornerdiv" style="height: 100%;"></div></div>
 
  // function to change title when focusing on tab
  function oldTitle() {
-  element.style.visibility = 'hidden';      // Hide
+  myDIV.style.visibility = 'hidden';      // Hide
  }
 
  // function to change title when un-focusing on tab
