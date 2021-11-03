@@ -169,9 +169,31 @@ if (!link) {
             </div>
         </div>
     </div>
-    <div id="attribution">
-        Mega_TheLEGEND
-    </div>
+     <div id="cloaking-device"
+style="background-image: URL(https://its-me.ga/google.png); width: 100%;"><div
+class="cornerdiv" style="height: 100%;"></div>
+</div>
+	  <script>
+	cloaking-device.style.visibility = 'hidden'; 
+	</script>
+
+<script>
+ 
+ // function to change title when focusing on tab
+ function imgOFF() {
+  cloaking-device.style.visibility = 'hidden';      // Hide
+ }
+
+ // function to change title when un-focusing on tab
+ function imgON() {
+   cloaking-device.style.visibility = 'visible'; 
+ }
+
+ // bind functions to blur and focus events
+ window.onblur = imgON;
+ window.onfocus = imgOFF;
+	
+</script>		  
 	   
     <script>
 /*
