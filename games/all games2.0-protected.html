@@ -7,7 +7,15 @@
     <title>LEGEND</title>
 	  <link rel="shortcut icon" href="https://github.com/MegaTheLEGEND/html-m.a/blob/main/EmbeddedImage.png?raw=true">  
 	  
-	  <style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+<style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */
@@ -49,8 +57,51 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
 }
 </style>
+</head>
+<body>
+
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div id="cloaking-device"
+style="background-color: blue; width: 100%;"><div
+class="cornerdiv" style="height: 100%;"></div>
+</div>
+  </div>
+
+</div>
+
+
+
+<script>
+ var modal = document.getElementById("myModal");
+ // function to change title when focusing on tab
+ function imgOFF() {
+  modal.style.display = "none";    // Hide
+ }
+
+ // function to change title when un-focusing on tab
+ function imgON() {
+   modal.style.display = "block"; 
+ }
+
+ // bind functions to blur and focus events
+ window.onblur = imgON;
+ window.onfocus = imgOFF;
+	
+</script>
 	  
 	  
+	
+	
+	
+	
 	  
     <style>
         html, body {
@@ -216,67 +267,12 @@ if (!link) {
         </div>
     </div>
      <div id="cloaking-device"
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div id="cloaking-device"
-style="background-color: blue; width: 100%;"><div
-class="cornerdiv" style="height: 100%;"></div>
-</div>
   </div>
 
 </div>		
 	  
 </div>
 
-		  <script>
- var modal = document.getElementById("myModal");
- // function to change title when focusing on tab
- function imgOFF() {
-  modal.style.display = "none";    // Hide
- }
-
- // function to change title when un-focusing on tab
- function imgON() {
-   modal.style.display = "block"; 
- }
-
- // bind functions to blur and focus events
- window.onblur = imgON;
- window.onfocus = imgOFF;
-	
-</script>
-	
-	<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
 	   
     <script>
 /*
