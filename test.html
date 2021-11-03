@@ -1,22 +1,9 @@
 <script>
-const changeFavicon = link => {
-  let $favicon = document.querySelector('link[rel="icon"]')
-  // If a <link rel="icon"> element already exists,
-  // change its href to the given link.
-  if ($favicon !== null) {
-    $favicon.href = link
-  // Otherwise, create a new element and append it to <head>.
-  } else {
-    $favicon = document.createElement("link")
-    $favicon.rel = "icon"
-    $favicon.href = link
-    document.head.appendChild($favicon)
-  }
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
 }
-</script>
-
-
-
-<script>
-  changeFavicon("http://www.stackoverflow.com/favicon.ico")
+link.href = 'https://stackoverflow.com/favicon.ico';
   </script>
