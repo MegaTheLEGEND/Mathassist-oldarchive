@@ -1,23 +1,4 @@
-<script>
-var link = document.querySelector("link[rel~='icon']");
-if (!link) {
-    link = document.createElement('link');
-    link.rel = 'icon';
-    document.getElementsByTagName('head')[0].appendChild(link);
-}
-  </script>
-	<input type="text" placeholder="paste a link" id="imgLink">
-    <button type="button" onclick="getInputValue();">change tab image</button>
-    
-    <script>
-        function getInputValue(){
-            // Selecting the input element and get its value 
-            var inputVal = document.getElementById("imgLink").value;
-            
-            link.href = inputVal;
-            
-        }
-    </script>
+
 <div id="myDIV"
 style="background-image: URL(https://its-me.ga/google.png); width: 100%;"><div
 class="cornerdiv" style="height: 100%;"></div>
