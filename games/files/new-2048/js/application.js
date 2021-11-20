@@ -1,4 +1,4 @@
-animationDelay = 0;
+animationDelay = 3;
 minSearchTime = 20;
 
 // Wait till the browser is ready to render the game (avoids glitches)
