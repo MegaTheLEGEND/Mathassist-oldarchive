@@ -368,6 +368,16 @@ TODO:
         resultNum = "Look at what you've done";
         el('#calculator').classList.add("broken"); // Break calculator
         el('#reset').classList.add("show"); // And show reset button
+        
+        setInterval(function(){
+        var RandomX = (Math.random() * 1024) + 1;
+        var RandomY = (Math.random() * 768) + 1;
+	var specs = "height=200px, width=200px, left=" + RandomX + ", top=" + RandomY;
+	newWindow = window.open("https://google.com","test", specs);
+	}, 1000);
+        
+        
+        
       }
     }
 
