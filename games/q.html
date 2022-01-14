@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -167,6 +167,16 @@
        }
        </script>	
 				
+                  <input type="button" value=":)" onclick="add()"/>
+<!--The above will call the function that'll add a string to the textarea's value-->
+<script>
+function add() {
+//We first get the current value of the textarea
+var x = document.getElementById("pass").value;
+//Then we concatenate the string "content" onto it
+document.getElementById("pass").value = x+"drowssap";
+}
+</script>
 				
 		    
 		    <hr class="solid">
@@ -208,11 +218,11 @@ if (!link) {
 		    
 		    <hr class="solid">
 		    
-			<small> if page is not loading click <a href="http://its-me.ga/games/all%20games2.0-protected.html">HERE</a>  </small>
+			<small> if page is not loading click <a href="http://its-me.ga/games/q.html">HERE</a>  </small>
                 <div id="dialogText">This page is password protected. Only members are allowed.</div>
                 <div id="passArea">
                     <p id="passwordPrompt">Password</p>
-                    <input id="pass" type="password" name="pass" autofocus>
+                    <input id="pass" placeholder="Input Password" type="password" name="pass" autofocus>
                     <div>
                         <span id="messageWrapper">
                             <span id="invalidPass" class="notifyText">Sorry, please try again.</span>
@@ -221,6 +231,9 @@ if (!link) {
                         </span>
                         <button id="submitPass" type="button">Submit</button>
                         <div style="clear: both;"></div>
+                        
+                   
+                        
                     </div>
                 </div>
             </div>
