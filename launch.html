@@ -1,0 +1,63 @@
+<script>
+        var urlObj = new window.URL(window.location.href);
+        var url = urlObj.searchParams.get('url');
+
+        if (url) {
+            var win;
+            var pre = document.getElementById('pre');
+            var post = document.getElementById('post');
+
+            document.querySelector('h1').style.display = 'block';
+            pre.textContent = 'Click ';
+            post.textContent = ' to start the game';
+            document.querySelector('a').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
+
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+                            pre.textContent = 'Game closed. Click ';
+                            post.textContent = ' to reopen the game';
+                        }
+                    }, 500);
+
+                    pre.textContent = 'Game is running. Click ';
+                    post.textContent = ' to switch to that tab.';
+                }
+            };
+        }
+    </script>
+    <script>
+    
+     win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+    
+    
+    </script>
+    
+    
+    
+</body>
+</html>
