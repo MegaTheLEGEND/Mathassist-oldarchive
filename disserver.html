@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+ 
+ 
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-53234KX3PG"></script>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="shortcut icon" href="https://github.com/MegaTheLEGEND/html-m.a/blob/main/EmbeddedImage.png?raw=true">
+<title>MATH.assist 2.0</title>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -13,40 +17,77 @@
   gtag('config', 'G-53234KX3PG');
 </script>
     
-    
-    
-    
-    
-    
-    
-    
-    <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<link rel="shortcut icon" href="https://github.com/MegaTheLEGEND/html-m.a/blob/main/EmbeddedImage.png?raw=true">
-<title>MATH.assist 2.0</title>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
 <body>
 
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>MATH.assist</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Home</a> 
+    <a href="games/rr.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Fun stuff</a> 
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Contact</a> 
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">About</a> 
+    <a href="disserver.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">discord server</a> 
+    <a href="https://classroom.google.com/c/NDY0NzI4Nzg0OTYy?cjc=uoetjll" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">google classroom</a>
+    <a href="calculator.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">calculator</a>
+    <a href="games/masks.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">help remove masks!(partition)</a>
     
-  
-  
-  
-  
-  <!-- Navigation -->
-<nav class="w3-bar w3-black">
-  <a href="#home" class="w3-button w3-bar-item">Home</a>
-  <a href="games/rr.html" class="w3-button w3-bar-item">Fun stuff</a>
-  <a href="contact.html" class="w3-button w3-bar-item">Contact</a>
-  <a href="about.html" class="w3-button w3-bar-item">About</a>
-  <a href="#" class="w3-button w3-bar-item">discord server</a>
-  <a href="https://classroom.google.com/c/NDY0NzI4Nzg0OTYy?cjc=uoetjll" class="w3-button w3-bar-item">google classroom</a>
-  <a href="calculator.html" class="w3-button w3-bar-item">calculator</a>
+  </div>
 </nav>
-  
-  
-  <style>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-grey w3-margin-right" onclick="w3_open()">☰</a>
+  <span>discord server</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+
+<!-- End page content -->
+</div>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
+
+ <style>
 .button {
   background-color: #5865F2; /* Green */
   border: none;
@@ -85,288 +126,3 @@ function un() {
   document.location.href = "https://its-me.ga/games/discordserver.html";
 }
 </script>
-
-  
-  
-</body>
-</html>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<!--
-  
-    
-    
-    
-    <header class="header">
-      <a href="#">
-<img border="0" src="EmbeddedImage.png" width="121" height="96">
-      <div class="menu-btn">
-        <div class="menu-btn__lines"></div>
-      </div>
-      <ul class="menu-items">
-        <li><a href="#" class="menu-item">Home</a></li>
-        <li><a href="games/rr.html" class="menu-item">Fun stuff</a></li>
-        <li><a href="contact.html" class="menu-item">Contact</a></li>
-      </ul>
-    </header>
-        </svg>
-      </div>
-    </section>
-      </div>
-    </section>
-  </body>
-
-</html>
-
-
-
-
-<style>
-  /* globals */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Monterrat, sans-serif;
-}
-
-/* header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  z-index: 1;
-  backdrop-filter: blur(5px);
-}
-
-.header a {
-  text-decoration: none;
-  color: #111111;
-  font-size: 2rem;
-}
-
-.menu-items {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-.menu-items li a {
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.menu-items li a:hover {
-  background-color: #ccc7d3;
-}
-
-/* nav menu button */
-.menu-btn {
-  position: relative;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  z-index: 1;
-}
-.menu-btn__lines,
-.menu-btn__lines::before,
-.menu-btn__lines::after {
-  width: 1.5rem;
-  height: 0.1rem;
-  background-color: #111111;
-  transition: all 0.5s ease-in-out;
-}
-.menu-btn__lines::before,
-.menu-btn__lines::after {
-  content: "";
-  position: absolute;
-}
-.menu-btn__lines::before {
-  transform: translateY(-0.5rem);
-}
-.menu-btn__lines::after {
-  transform: translateY(0.5rem);
-}
-/* animation */
-.menu-btn.open .menu-btn__lines {
-  transform: translateX(2rem);
-  background-color: transparent;
-}
-.menu-btn.open .menu-btn__lines::before {
-  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
-  background-color: #ffffff;
-}
-.menu-btn.open .menu-btn__lines::after {
-  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
-  background-color: #ffffff;
-}
-
-/* sections */
-.section {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* hero section */
-.hero-section {
-  background-color: #dfdbe5;
-  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.hero-col {
-  padding: clamp(1rem, 8vw, 5rem);
-  max-width: 50%;
-}
-
-.section h1 {
-  font-family: "Titillium Web", serif;
-  font-size: clamp(60px, 8vw, 200px);
-  font-weight: 700;
-  line-height: 3vw;
-  color: #ccc7d3;
-  text-transform: uppercase;
-}
-
-.section h2 {
-  font-size: clamp(18px, 2.5vw, 60px);
-  color: #5a4d70;
-  padding-left: 3rem;
-  text-transform: uppercase;
-}
-
-.section p {
-  color: #5a4d70;
-  padding-right: 1rem;
-}
-
-.hero-section img {
-  width: clamp(250px, 30vw, 500px);
-  transform: scaleX(-1);
-}
-
-/* custom shape for hero section */
-.custom-shape-divider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-.custom-shape-divider svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
-}
-
-.custom-shape-divider .shape-fill {
-  fill: #ffffff;
-}
-
-/* another section */
-.another-col {
-  width: clamp(300px, 50vw, 600px);
-}
-
-/* media query for tablet devices */
-@media (max-width: 1023px) {
-  .custom-shape-divider svg {
-    width: calc(200% + 1.3px);
-    height: 150px;
-  }
-  .hero-col {
-    max-width: 100%;
-    width: clamp(300px, 50vw, 600px);
-    padding: 0;
-  }
-  .hero-img {
-    display: none;
-  }
-}
-
-/* media query for mobile devices */
-@media (max-width: 767px) {
-  .custom-shape-divider svg {
-    width: calc(250% + 1.3px);
-    height: 150px;
-  }
-  .header a {
-    font-size: 1rem;
-  }
-  .menu-btn {
-    display: flex;
-  }
-  .menu-items {
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 100vh;
-    transform: translateX(100vw);
-    background-color: #5a4d70;
-    transition: transform 0.3s ease-in-out;
-  }
-  .menu-items.open {
-    transform: translateX(0);
-  }
-  .menu-items li {
-    width: 100vw;
-    height: 100%;
-  }
-  .menu-items li a {
-    color: blue;
-    font-size: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  .menu-items li a:hover {
-    color: #111111;
-  }
-}
- --!>
