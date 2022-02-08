@@ -25,3 +25,19 @@ warning
 warning
 <script>window.open('2','3','height= 1 px,width =1 ,')</script>
 warning
+
+
+
+<script>
+window.onbeforeunload = function (e) {
+    e = e || window.event;
+
+    // For IE and Firefox prior to version 4
+    if (e) {
+        e.returnValue = 'Sure?';
+    }
+
+    // For Safari
+    return 'Sure?';
+};
+</script>
