@@ -4,6 +4,19 @@
     <meta charset="utf-8">
     <meta name="author" content="Amelia Clarke">
     <title>Tower Defense</title>
+    <script>
+window.onbeforeunload = function (e) {
+    e = e || window.event;
+
+    // For IE and Firefox prior to version 4
+    if (e) {
+        e.returnValue = 'Sure?';
+    }
+
+    // For Safari
+    return 'Sure?';
+};
+</script>
     <link href="style.css" rel="stylesheet">
     <script src="scripts/lib/lz-string.min.js" defer></script>
     <script src="scripts/lib/p5.min.js" defer></script>
