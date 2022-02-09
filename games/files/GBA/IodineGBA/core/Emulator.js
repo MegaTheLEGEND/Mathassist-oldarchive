@@ -24,8 +24,8 @@ function GameBoyAdvanceEmulator() {
     this.loaded = false;                      //Did we initialize IodineGBA?
     this.faultFound = false;                  //Did we run into a fatal error?
     this.paused = true;                       //Are we paused?
-    this.offscreenWidth = 240;                //Width of the GBA screen.
-    this.offscreenHeight = 160;               //Height of the GBA screen.
+    this.offscreenWidth = 1920;                //Width of the GBA screen.
+    this.offscreenHeight = 1080;               //Height of the GBA screen.
     this.BIOS = [];                           //Initialize BIOS as not existing.
     this.ROM = [];                            //Initialize BIOS as not existing.
     //Cache some frame buffer lengths:
