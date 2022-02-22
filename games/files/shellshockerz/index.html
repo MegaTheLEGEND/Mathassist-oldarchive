@@ -1,127 +1,69 @@
-<!DOCTYPE html><html lang="en"><head><title>Shell Shockers Game Files - Crazy Games</title><link href="https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js" rel="preload" as="script" /><link href="https://www.crazygames.com/game/shellshockersio" rel="canonical" /><meta charset="UTF-8" /><meta name="robots" content="noindex, follow" /><meta name="description" content="The game files for Shell Shockers, a free browser game on CrazyGames.com" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Accept-CH" content="DPR" /><meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui" /><style id="pacman-styles">/* purple background */
-body {
-  background-image: linear-gradient(290deg, #3b2b73 55%, #6f2f93, #6f2f93);
-  background-position: center;
-  text-align: center;
-}
-/* for positioning of pacman loader */
-body, html { height: 100%; }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-@keyframes rotate_preloadpacman_half_up {
-  0% {
-    transform: rotate(270deg); }
-  50% {
-    transform: rotate(360deg); }
-  100% {
-    transform: rotate(270deg); }
-}
+<head>
+<style>
+        body {
+            margin: 0;
+            height: 100vh;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        h1 {
+            display: none;
+            margin: 0;
+            font-weight: normal;
+            font-size: 40px;
+        }
+        a {
+            color: #8a8461;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="margin: 0; height: 100vh;">
+<h1><span id="pre"></span><a>here</a><span id="post"></span></h1>
+<script>
+        var urlObj = new window.URL(window.location.href);
+        var url = urlObj.searchParams.get('url');
 
-@keyframes rotate_preloadpacman_half_down {
-  0% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
+        if (url) {
+            var win;
+            var pre = document.getElementById('pre');
+            var post = document.getElementById('post');
 
-@keyframes preloadpacman-balls {
-  75% {
-    opacity: 0.7;
-  }
-  100% {
-    transform: translate(-100px, -6.25px);
-  }
-}
+            document.querySelector('h1').style.display = 'block';
+            pre.textContent = 'Click ';
+            post.textContent = ' to start the game';
+            document.querySelector('a').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
 
-.preloadpacman {
-  position: relative;
-}
-.preloadpacman > div:nth-child(2) {
-  animation: preloadpacman-balls 1s -0.99s infinite linear;
-}
-.preloadpacman > div:nth-child(3) {
-  animation: preloadpacman-balls 1s -0.66s infinite linear;
-}
-.preloadpacman > div:nth-child(4) {
-  animation: preloadpacman-balls 1s -0.33s infinite linear;
-}
-.preloadpacman > div:nth-child(5) {
-  animation: preloadpacman-balls 1s 0s infinite linear;
-}
-.preloadpacman > div:first-of-type {
-  width: 0px;
-  height: 0px;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #fff;
-  border-left: 25px solid #fff;
-  border-bottom: 25px solid #fff;
-  border-radius: 25px;
-  animation: rotate_preloadpacman_half_up 0.5s 0s infinite;
-  position: relative;
-  left: -30px;
-}
-.preloadpacman > div:nth-child(2) {
-  width: 0px;
-  height: 0px;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #fff;
-  border-left: 25px solid #fff;
-  border-bottom: 25px solid #fff;
-  border-radius: 25px;
-  animation: rotate_preloadpacman_half_down 0.5s 0s infinite;
-  margin-top: -50px;
-  position: relative;
-  left: -30px;
-}
-.preloadpacman > div:nth-child(3),
-.preloadpacman > div:nth-child(4),
-.preloadpacman > div:nth-child(5),
-.preloadpacman > div:nth-child(6) {
-  background-color: #fff;
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  margin: 2px;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  transform: translate(0, -6.25px);
-  top: 25px;
-  left: 70px;
-}
-</style></head><body><div class="preloadpacman" id="pacman"><div></div><div></div><div></div><div></div><div></div></div><script type="text/javascript">function loadScript(url, async, callback) {
-  var head = document.head;
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = url;
-  if(async) {
-    script.async = true;
-  }
-  script.onreadystatechange = callback;
-  script.onload = callback;
-  head.appendChild(script);
-}
-var options = {"loader":"iframe","loaderOptions":{"url":"https://scrambled.world/crazy-games.php"},"author":"Blue Wizard Digital","thumbnail":"https://images.crazygames.com/shellshockersio/20200825110135/shellshockersio-cover?auto=format,compress&q=75&cs=strip&w=360","gameName":"Shell Shockers","gameHttps":true,"gameSlug":"shellshockersio","gameStatus":"published","showAdOnExternal":"NEVER","showAdOnInternal":"DEFAULT","appStoreLink":"https://apps.apple.com/us/app/shell-shockers/id1515978119","playStoreLink":"https://play.google.com/store/apps/details?id=com.bluewizard.shellshockers","steamStoreLink":null,"disableEmbedding":false,"dollarRate":0.855765075371509,"upvotes":931828,"downvotes":81088,"releaseDate":"2017-09-28","locale":"en_US","controls":{"mouse":{"left":{"en_US":"Fire"}},"keyboard":[{"keys":["WASD"],"label":{"en_US":"Move"}},{"keys":["SPACE"],"label":{"en_US":"Jump"}},{"keys":["SHIFT"],"label":{"en_US":"Zoom & Aim"}},{"keys":["R"],"label":{"en_US":"Reload"}},{"keys":["E"],"label":{"en_US":"Weapon"}},{"keys":["Q"],"label":{"en_US":"Grenade"}}]},"videoThumbnail":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-180x111.mp4","video":{"original":"https://videos.crazygames.com/shellshockersio/2/shellshockersio.mp4","sizes":[{"width":180,"height":111,"location":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-180x111.mp4"},{"width":360,"height":222,"location":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-360x222.mp4"},{"width":540,"height":333,"location":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-540x333.mp4"},{"width":720,"height":444,"location":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-720x444.mp4"}]},"sandbox":true,"minTimeBetweenMidrollAdsInMs":180000,"minTimeBetweenRewardedAdsInMs":5000,"noMidrollAdInFirstMinutes":3,"noRewardedAdInFirstMinutes":0,"categoryEnSlug":"io","tagsEnSlugs":["3d","webgl","with-friends","gun","weapon","multiplayer","first-person-shooter"],"fullscreen":"ADDS_VALUE","orientation":null,"bannerRefreshDelayInMs":30000,"category":"First Person Shooter","categoryLink":"https://www.crazygames.com/t/first-person-shooter","gameLink":"https://www.crazygames.com/game/shellshockersio","alternativeGames":[{"category":".io","gameSlug":"merc-zone","gameName":"Merc Zone","rating":8.9,"thumbnail":"https://images.crazygames.com/games/merc-zone/cover-1614702000604.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/merc-zone/4/merc-zone-180x111.mp4","gameLink":"https://www.crazygames.com/game/merc-zone","loader":"iframe"},{"category":".io","gameSlug":"krunker-io","gameName":"Krunker","rating":9.1,"thumbnail":"https://images.crazygames.com/games/krunker-io/cover-1591336739727.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/krunker-io/3/krunker-io-180x111.mp4","gameLink":"https://www.crazygames.com/game/krunker-io","loader":"iframe"},{"category":".io","gameSlug":"repuls","gameName":"REPULS","rating":9.1,"thumbnail":"https://images.crazygames.com/repuls-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/repuls/2/repuls-thumbnail.mp4","gameLink":"https://www.crazygames.com/game/repuls","loader":"iframe"},{"category":"Shooting","gameSlug":"bullet-force-multiplayer","gameName":"Bullet Force","rating":9,"thumbnail":"https://images.crazygames.com/games/bullet-force-multiplayer/cover-1588010858655.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/bullet-force-multiplayer/8/bullet-force-multiplayer-180x111.mp4","gameLink":"https://www.crazygames.com/game/bullet-force-multiplayer","loader":"5.6.x"},{"category":".io","gameSlug":"smash-karts","gameName":"Smash Karts","rating":9,"thumbnail":"https://images.crazygames.com/smash-karts/20201119155032/smash-karts-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/smash-karts/10/smash-karts-180x111.mp4","gameLink":"https://www.crazygames.com/game/smash-karts","loader":"iframe"},{"category":".io","gameSlug":"zombsroyaleio","gameName":"Zombs Royale (ZombsRoyale.io)","rating":8.9,"thumbnail":"https://images.crazygames.com/games/zombsroyaleio/cover-1587299840102.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/zombsroyaleio/2/zombsroyaleio-180x111.mp4","gameLink":"https://www.crazygames.com/game/zombsroyaleio","loader":"iframe"},{"category":".io","gameSlug":"war-brokers-io","gameName":"War Brokers (.io)","rating":9.1,"thumbnail":"https://images.crazygames.com/games/war-brokers-io/cover-1588155718344.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/war-brokers-io/1/war-brokers-io-180x111.mp4","gameLink":"https://www.crazygames.com/game/war-brokers-io","loader":"iframe"},{"category":".io","gameSlug":"ev-io","gameName":"Ev.io","rating":9.1,"thumbnail":"https://images.crazygames.com/ev-io/20210120171539/ev-io-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/ev-io/1/ev-io-thumbnail.mp4","gameLink":"https://www.crazygames.com/game/ev-io","loader":"iframe"},{"category":".io","gameSlug":"spaceguard-io","gameName":"SpaceGuard.io","rating":9.2,"thumbnail":"https://images.crazygames.com/games/spaceguard-io/thumb-1572007130736.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/spaceguard-io/1/spaceguard-io-thumbnail.mp4","gameLink":"https://www.crazygames.com/game/spaceguard-io","loader":"5.6.x"},{"category":".io","gameSlug":"voxiom-io","gameName":"Voxiom.io","rating":9,"thumbnail":"https://images.crazygames.com/voxiom-io/20201028120539/voxiom-io-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/voxiom-io/1/voxiom-io-thumbnail.mp4","gameLink":"https://www.crazygames.com/game/voxiom-io","loader":"iframe"}],"country":"US","domainHasNoCMP":false};
-var SDK_READY = false;
-var GF_READY = false;
-var GF_LOAD_CALLED = false;
-loadScript("https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js", true, function() {
-    Crazygames.load(options).then(function() {
-      var pacmanWrapper = document.getElementById('pacman');
-      var pacmanStyles = document.getElementById('pacman-styles');
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+                            pre.textContent = 'Game closed. Click ';
+                            post.textContent = ' to reopen the game';
+                        }
+                    }, 500);
 
-      if (pacmanWrapper && pacmanStyles) {
-        pacmanWrapper.remove();
-        pacmanStyles.remove();
-      }
-    });
-});</script></body></html>
+                    pre.textContent = 'Game is running. Click ';
+                    post.textContent = ' to switch to that tab.';
+                }
+            };
+        }
+    </script>
+</body>
+</html>
