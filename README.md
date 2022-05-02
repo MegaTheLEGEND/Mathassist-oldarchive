@@ -2,8 +2,10 @@
 for educational purposes only. I DO NOT claim any of these games to be my creation
 
 
-#deleted for ever#
 
+
+i deleted this for ever
+visit the main link: https://its-me.ga
 
 
 
@@ -19,7 +21,3 @@ mirror links may not always be up to date.
 cloak links are able to be blocked, but easier to make and maintain.
 
 https://its-me.ga (main)
-
-https://schooldudes.cf (mirror)
-
-https://forsureschoolwork.ml (cloak)
