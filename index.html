@@ -52,9 +52,21 @@
     .project-description {
       margin-top: 10px;
     }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+  <script>
+    // Check if the user prefers dark mode
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+  
   <div class="container">
     <img src="profile-image.jpg" alt="Mega_TheLEGEND" class="profile-image">
     <h1>Mega_TheLEGEND</h1>
@@ -74,7 +86,7 @@
         <p class="project-description">Games website with educational math games.</p>
       </div>
       <div class="project">
-        <h2><a href="https://megathelegend.github.io/FileZ-client">File-Z Client</a></h2>
+        <h2><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
         <p class="project-description">Another games website running in the file:// protocol.</p>
       </div>
       <!-- Add more projects as needed -->
